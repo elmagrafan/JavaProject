@@ -42,4 +42,11 @@ public class User {
         this.age = age;
         this.CNP = CNP;
     }
+
+    @Override
+    public String toString()
+    {
+        return String.format("Name: %s, Age: %d, CNP: %s", name, age, CNP);
+    }
+
 }

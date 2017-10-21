@@ -1,9 +1,12 @@
+import java.util.List;
+
 /**
  * Created by Ovidiu on 10/14/2017.
  */
 public interface UserManager {
 
-    String getLinkAccountToCard();
-    void setLinkAccountToCard(String linkAccountToCard);
+    boolean addNewUser(User userToAdd);
+    boolean removeUser(User userToRemove);
+    List<User> getAllUsers();
 
 }

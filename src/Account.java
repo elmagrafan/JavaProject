@@ -1,57 +1,38 @@
+import java.util.ArrayList;
+
 /**
  * Created by Ovidiu on 10/14/2017.
  */
 public class Account {
     private User user;
-    private int balance;
-    private String history;
-    private String accountManager;
+    private double balance;
+    private ArrayList<Transaction> transactionHistory;
+
+    public Account(User user, double balance, ArrayList<Transaction> history)
+    {
+        this.user = user;
+        this.balance = balance;
+        this.transactionHistory = history;
+    }
 
     public User getUser()
     {
         return user;
     }
 
-    public void setUser(User user)
-    {
-        this.user = user;
-    }
-
-    public int getBalance()
+    public double getBalance()
     {
         return balance;
     }
 
-    public void setBalance(int balance)
+    public ArrayList<Transaction> getTransactionHistory()
     {
-        this.balance = balance;
+        return transactionHistory;
     }
 
-    public String getHistory()
+    public void addToBalance(double sum)
     {
-        return history;
-    }
-
-    public void setHistory(String history)
-    {
-        this.history = history;
-    }
-
-    public String getAccountManager()
-    {
-        return accountManager;
-    }
-
-    public void setAccountManager(String accountManager)
-    {
-        this.accountManager = accountManager;
-    }
-
-    public Account(User user, int balance, String history, String accountManager)
-    {
-        this.user = user;
-        this.balance = balance;
-        this.history = history;
-        this.accountManager = accountManager;
+        // Check for balance under 0 ???
+        this.balance += sum;
     }
 }

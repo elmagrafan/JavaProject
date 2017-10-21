@@ -4,15 +4,15 @@ import java.util.Date;
  * Created by Ovidiu on 10/14/2017.
  */
 public class Transaction {
-    private int sum;
+    private double sum;
     private Date date;
 
-    public int getSum()
+    public double getSum()
     {
         return sum;
     }
 
-    public void setSum(int sum)
+    public void setSum(double sum)
     {
         this.sum = sum;
     }

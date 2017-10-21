@@ -6,17 +6,8 @@ import java.util.ArrayList;
  */
 public interface AccountManager {
 
-     int getInsertSum();
-     void setInsertSum(int insertSum);
-     int getWithdrawSum();
-     void setWithdrawSum(int withdrawSum);
-     Account getEmptyAcc();
-     void setEmptyAcc(Account emptyAcc);
-     ArrayList getTransactionHistory();
-     void setTransactionHistory(ArrayList<Array> transactionHistory);
-     String getCreateAccount();
-     void setCreateAccount(String createAccount);
-     String getDeleteAccount();
-     void setDeleteAccount(String deleteAccount);
+     boolean addNewAccount(Account newAccountToAdd);
+     boolean removeAccount(Account accountToRemove);
+     boolean addTransactionForAccount(Account accountToAddTransactionFor, Transaction newTransaction);
 
 }
